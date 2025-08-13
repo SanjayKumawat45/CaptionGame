@@ -50,14 +50,23 @@ class MainActivity : ComponentActivity() {
 fun CaptainGame(){
     val treasureFound = remember { mutableStateOf(0) }
     val direction = remember { mutableStateOf("North") }
+    val health = remember { mutableStateOf(100) }
+
 
     Column(modifier = Modifier.fillMaxSize(), verticalArrangement = Arrangement.Center, horizontalAlignment = Alignment.CenterHorizontally ) {
         Text("Treasure Found: ${treasureFound.value}")
         Text("Current Direction: ${direction.value}")
+        Text("Health: ${health.value}")
         Button(onClick = {
             direction.value = "East"
             if (Random.nextBoolean()){
                 treasureFound.value +=1
+                if (health.value<100){
+                    health.value = 100
+                }
+            }
+            if (Random.nextBoolean()){
+                health.value -= 5
             }
 
         }) {
@@ -68,6 +77,12 @@ fun CaptainGame(){
             direction.value = "West"
             if (Random.nextBoolean()){
                 treasureFound.value +=1
+                if (health.value<100){
+                    health.value = 100
+                }
+            }
+            if (Random.nextBoolean()){
+                health.value -= 5
             }
 
         }) {
@@ -78,6 +93,12 @@ fun CaptainGame(){
             direction.value = "North"
             if (Random.nextBoolean()){
                 treasureFound.value +=1
+                if (health.value<100){
+                    health.value = 100
+                }
+            }
+            if (Random.nextBoolean()){
+                health.value -= 5
             }
 
         }) {
@@ -88,6 +109,12 @@ fun CaptainGame(){
             direction.value = "South"
             if (Random.nextBoolean()){
                 treasureFound.value +=1
+                if (health.value<100){
+                    health.value = 100
+                }
+            }
+            if (Random.nextBoolean()){
+                health.value -= 5
             }
 
         }) {
