@@ -18,6 +18,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.captiongame.ui.theme.CaptionGameTheme
+import kotlin.random.Random
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -49,6 +50,9 @@ fun CaptainGame(){
         Text("Current Direction: ${direction.value}")
         Button(onClick = {
             direction.value = "East"
+            if (Random.nextBoolean()){
+                treasureFound.value +=1
+            }
 
         }) {
             Text("Sail East")
