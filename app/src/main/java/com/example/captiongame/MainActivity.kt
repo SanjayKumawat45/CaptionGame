@@ -62,7 +62,7 @@ fun CaptainGame(){
             if (Random.nextBoolean()){
                 treasureFound.value +=1
                 if (health.value<100){
-                    health.value = 100
+                    health.value += 5
                 }
             }
             if (Random.nextBoolean()){
@@ -78,7 +78,7 @@ fun CaptainGame(){
             if (Random.nextBoolean()){
                 treasureFound.value +=1
                 if (health.value<100){
-                    health.value = 100
+                    health.value += 5
                 }
             }
             if (Random.nextBoolean()){
@@ -94,7 +94,7 @@ fun CaptainGame(){
             if (Random.nextBoolean()){
                 treasureFound.value +=1
                 if (health.value<100){
-                    health.value = 100
+                    health.value += 5
                 }
             }
             if (Random.nextBoolean()){
@@ -110,7 +110,7 @@ fun CaptainGame(){
             if (Random.nextBoolean()){
                 treasureFound.value +=1
                 if (health.value<100){
-                    health.value = 100
+                    health.value += 5
                 }
             }
             if (Random.nextBoolean()){
